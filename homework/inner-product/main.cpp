@@ -1,8 +1,7 @@
 #include <iostream>
 #include "arithmeticAverage.hpp"
 
-int main()
-{
+int main() {
     std::vector<int> vecA = {1, 2, 3, 4};
     std::vector<int> vecAA = {1, 2, 3, 4};
 
