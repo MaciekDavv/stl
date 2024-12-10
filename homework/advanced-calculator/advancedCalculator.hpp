@@ -1,27 +1,25 @@
 #pragma once
 
-#include <string>
-#include <regex>
-#include <map>
-#include <cmath>
-#include <sstream>
 #include <algorithm>
-#include <optional>
+#include <cmath>
 #include <iostream>
+#include <map>
+#include <optional>
+#include <regex>
+#include <sstream>
+#include <string>
 
 using Operation = std::function<double(double, double)>;
 extern std::map<char, Operation> mymap;
 
 struct TakeString {
-
     double first = {0};
     char beatween = {' '};
     double second = {0};
-
     void convertStringToDouble(std::string& str);
 };
 
-enum class ErrorCode{
+enum class ErrorCode {
     OK,
     BadCharacter,
     BadFormat,
