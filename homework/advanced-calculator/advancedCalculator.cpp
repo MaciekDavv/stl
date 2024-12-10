@@ -97,19 +97,19 @@ ErrorCode process(std::string input, double* out) {
     }
     conwert.convertStringToDouble(clearString);
     switch (conwert.beatween) {
-        case '/':
+    case '/':
         if (conwert.second == 0 || conwert.second == 0.0 || conwert.second == -0 || conwert.second == -0.0) {
             return ErrorCode::DivideBy0;
             break;
         } else {
             break;
         }
-        case '%':
+    case '%':
         if (std::round(conwert.first) != conwert.first || std::round(conwert.second) != conwert.second) {
             return ErrorCode::ModuleOfNonIntegerValue;
             break;
         }
-        case '$':
+    case '$':
         if (conwert.second == 1 || conwert.second == -1) {
             return ErrorCode::SqrtOfNegativeNumber;
             break;
