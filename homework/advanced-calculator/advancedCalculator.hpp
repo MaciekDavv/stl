@@ -3,26 +3,21 @@
 #include <string>
 #include <regex>
 #include <map>
-#include <functional>
 #include <cmath>
 #include <sstream>
-#include <vector>
-#include <numeric>
 #include <algorithm>
+#include <iostream>
 
 using Operation = std::function<double(double, double)>;
-
 extern std::map<char, Operation> mymap;
 
 struct TakeString {
 
-        double first = {0};
-        char beatween = {' '};
-        double second = {0};
+    double first = {0};
+    char beatween = {' '};
+    double second = {0};
 
-
-        void convertStringToDouble(std::string& str);
-        void checkIfStringIsCorect(std::string& str);
+    void convertStringToDouble(std::string& str);
 };
 
 enum class ErrorCode{
@@ -34,7 +29,10 @@ enum class ErrorCode{
     ModuleOfNonIntegerValue
 };
 
+std::string removeWhiteSpaces(std::string& input);
+bool badCharacter(const std::string& input);
+bool badFormat(const std::string& input);
+double factorialCount(double n);
+double factorialOperation(double a);
 
 ErrorCode process(std::string input, double* out);
-
-
