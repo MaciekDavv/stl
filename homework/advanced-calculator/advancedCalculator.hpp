@@ -6,6 +6,7 @@
 #include <cmath>
 #include <sstream>
 #include <algorithm>
+#include <optional>
 #include <iostream>
 
 using Operation = std::function<double(double, double)>;

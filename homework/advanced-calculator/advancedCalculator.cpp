@@ -22,7 +22,7 @@ Operation subtraction = [](const auto& a, const auto& b) { return a - b; };
 Operation multiplication = [](const auto& a, const auto& b) { return a * b; };
 Operation division = [](const auto& a, const auto& b) { return a / b; };
 Operation modulo = [](const auto& a, const auto& b) { return std::fmod(a, b); };
-Operation factorial = [](const auto& a, std::optional<double>) { return factorialOperation(a); };
+Operation factorial = [](const auto& a, std::optional<double> notActive) { return factorialOperation(a); };
 Operation power = [](const auto& a, const auto& b) { return std::pow(a, b); };
 Operation element = [](const auto& a, const auto& b) { return std::pow(a, 1.0 / b); };
 

@@ -12,6 +12,7 @@ int main() {
         if (Input == "q") {
             break;
         }
+    *point = 0;
     process(Input, point);
     std::cout << Input << " = " << *point << '\n';
     }
